@@ -11,20 +11,20 @@ Aunque están planteados cubriendo un espectro de dificultad incremental, si te 
 1. Crear una variable de nombre **variableSinValor** declarada **sin ningún valor**
 2. Crear dos variables de nombres **booleano1** y **booleano2** con valores **booleanos**
 3. Crear una tupla de nombre **PI** declarada con valor **(3,14)**
-4. Crear una tupla de nombre **TAU** declarada con valor **2 veces PI**
+4. Crear una tupla de nombre **TAU** declarada con valor **2 veces PI**, es decir, **(6,28)**
 5. Crear una variable de nombre **variableValorNumerico** declarada con un **valor numérico cualquiera**
 6. Crear una variable de nombre **miNombre** declarada con el valor de **tu nombre**
-7. Crear una variable tipo **const** de nombre **miNumeroFav** declarada con un **valor numérico**
+7. Crear una variable de nombre **miNumeroFav** declarada con un **valor numérico**
 
 ## Booleanos
 
-8. Crear una variable **booleanoAnd** cuyo valor sea la comparación booleana **booleano1 and booleano2**
-9. Crear una variable **booleanoNot** cuyo valor sea la compracación booleana **no booleano1**
-10. Crear una variable **booleanoMix0** cuyo valor sea la compración booleana **(booleano1 or booleano2) and (booleano1 or (not booleano1 and not booleano2)**
-11. Crear una variable **booleanoOr** cuyo valor sea la comparación booleana **booleano1 or booleano2**
-12. Crear una variable **booleanoMix1** cuyo valor sea la comparación booleana **(booleano1 and (TAU/2 sea igual a PI)) or (variableValorNumerico mayor o igual que miNumeroFav)**
-13. Crear una variable **seisNoEsNueve** cuyo valor sea la comparación booleana **6 no es igual que 9**
-14. Crear una variable **booleanoMix2** cuyo valor sea la comparación booleana **variableValorNumerico positivo (0 no incluido) o menor que -(miNumeroFav * TAU)**
+8. Crear una variable **booleanoAnd** cuyo valor sea la expresión booleana **booleano1 and booleano2**
+9. Crear una variable **booleanoNot** cuyo valor sea la expresión booleana **no booleano1**
+10. Crear una variable **booleanoMix0** cuyo valor sea la expresión booleana **(booleano1 or booleano2) and (booleano1 or (not booleano1 and not booleano2)**
+11. Crear una variable **booleanoOr** cuyo valor sea la expresión booleana **booleano1 or booleano2**
+12. Crear una variable **booleanoMix1** cuyo valor sea la expresión booleana **(booleano1 and (TAU/2 sea igual a PI)) or (variableValorNumerico mayor o igual que miNumeroFav)**
+13. Crear una variable **seisNoEsNueve** cuyo valor sea la expresión booleana **6 no es igual que 9**
+14. Crear una variable **booleanoMix2** cuyo valor sea la expresión booleana **variableValorNumerico positivo (0 no incluido) o menor que -(miNumeroFav * TAU)**
 
 ## Operadores
 

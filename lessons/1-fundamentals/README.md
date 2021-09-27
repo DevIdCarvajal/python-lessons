@@ -1,4 +1,4 @@
-# 01. Fundamentos de programación en Python
+# 1. Fundamentos de programación en Python
 
 ## Índice
 
@@ -35,10 +35,12 @@ Python presenta todos estos tipos:
 String - str
 Integer - int
 Float - float
+Complex - complex
+Boolean - bool
 List - list
 Tuple - tuple
 Set - set
-Boolean - bool
+Dictionary - dict
 None
 ```
 

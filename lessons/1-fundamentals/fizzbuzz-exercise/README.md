@@ -24,7 +24,7 @@ Salida por consola:
 Fizz
 4
 Buzz
-6
+Fizz
 7
 8
 Fizz
