@@ -114,3 +114,5 @@
 
 [Documentación oficial de VS Code](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)  
 [Entornos virtuales con Python](https://code.tutsplus.com/es/tutorials/understanding-virtual-environments-in-python--cms-28272)
+
+[Matlab vs Python](https://realpython.com/matlab-vs-python/)

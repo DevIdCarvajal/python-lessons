@@ -47,7 +47,7 @@ Aunque están planteados cubriendo un espectro de dificultad incremental, si te 
 25. Crear una variable **sumaPares** con valor **0**. A continuación crear un bucle que **itere 10 veces (i < 10)**. Si la iteración es par se deberá **sumar a sumaPares el número de la iteración actual (i)**
 26. Crear una variable **contarHasta10for** con valor **0** e incrementar su valor con un **bucle for hasta que se verifique que contarHasta10for == 10**
 
-### Funciones ###
+## Funciones
 
 27. Crear la función **suma** que acepte como argumentos **dos números** y devuelva **el resultado de su suma**
 28. Crear la función **potenciacion** que acepte como argumentos **dos números** y devuelva **el resultado de elevar el primero al segundo**

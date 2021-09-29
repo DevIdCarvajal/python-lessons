@@ -33,4 +33,6 @@
 [Codecademy](https://www.codecademy.com/learn/learn-python)  
 [Sololearn](https://www.sololearn.com/learning/1073)
 
+[Python For Everybody](https://www.py4e.com/lessons)
+
 [Katas Codewars](https://www.codewars.com/kata/search/python)
