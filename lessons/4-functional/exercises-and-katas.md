@@ -1,8 +1,6 @@
 # Ejercicios
 
-## Con solución:
-
-[Aprende con Alf](https://aprendeconalf.es/docencia/python/ejercicios/programacion-funcional/)
+[Programación funcional](https://aprendeconalf.es/docencia/python/ejercicios/programacion-funcional/)  [Recursividad](https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion.php)
 
 ## Katas Codewars:
 

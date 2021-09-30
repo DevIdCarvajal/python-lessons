@@ -204,11 +204,58 @@ skillsWithO = [skill if skill != "coding" else "programming" for skill in skills
 
 ## 5. Generadores
 
-[Coming soon]
+Son funciones capaces de generar un sinfín de resultados obtenidos "poco a poco", es decir, en pasos sucesivos y en tiempo de ejecución, lo que implica un menor coste de recursos:
+
+```
+def getEven():
+    index = 1
+    
+    # ¡Atención, bucle infinito!
+    while True:
+        
+        # Devolvemos un valor
+        yield index * 2
+        index = index + 1
+
+for i in getEven():
+    print(i)
+```
 
 ## 6. Decoradores
 
-[Coming soon]
+Se trata de un patrón de diseño que consiste en una función que recibe otra función, la extiende (dotándola de mayor funcionalidad) y la devuelve:
+
+```
+def sayHelloDecorator(decoratedFunction):
+    def giveSuperPowers():
+        print("Hello")
+        decoratedFunction()
+        print("Bye")
+    return giveSuperPowers
+
+def printAdaName():
+    print("Ada")
+
+printAdaName = sayHelloDecorator(printAdaName)
+printAdaName()
+```
+
+Versión simplificada (notación @):
+
+```
+def sayHelloDecorator(decoratedFunction):
+    def giveSuperPowers():
+        print("Hello")
+        decoratedFunction()
+        print("Bye")
+    return giveSuperPowers
+
+@sayHelloDecorator
+def printAdaName():
+    print("Ada")
+
+printAdaName()
+```
 
 ## 7. Bonustrack: Recursividad
 
@@ -221,4 +268,7 @@ skillsWithO = [skill if skill != "coding" else "programming" for skill in skills
 [map(), filter() y reduce()](https://stackabuse.com/map-filter-and-reduce-in-python-with-examples/)  
 [Funciones lambda](https://www.w3schools.com/python/python_lambda.asp)  
 [Comprensión de listas](https://www.w3schools.com/python/python_lists_comprehension.asp)  
-[Currificación](https://www.campusmvp.es/recursos/post/Que-es-la-Currificacion-en-programacion-funcional.aspx)
+[Currificación](https://www.campusmvp.es/recursos/post/Que-es-la-Currificacion-en-programacion-funcional.aspx)  
+[Generadores](https://python-intermedio.readthedocs.io/es/latest/generators.html)  
+[Decoradores](https://python-intermedio.readthedocs.io/es/latest/decorators.html)  
+[Generador Fibonacci](https://www.csestack.org/python-fibonacci-generator/)
