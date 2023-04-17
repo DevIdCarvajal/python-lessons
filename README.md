@@ -20,7 +20,8 @@
 6. Programación paralela:
     - Sockets
     - Threads
-7. Conexión con bases de datos (DB-API)
+7. Conexión con bases de datos
+8. Documentación y pruebas unitarias
 
 ## Referencias generales
 
