@@ -1,4 +1,4 @@
-# Conditional
+# ------------- Conditional -------------
 
 age = input("Escribe tu edad: ")
 intAge = int(age)
@@ -12,7 +12,7 @@ else: # 17 o menos
 
 print("El precio final es: " + str(cost))
 
-# Loop
+# ------------- Loop -------------
 
 weekend = False # 1
 
@@ -24,7 +24,7 @@ while(weekend == False):
 
 print("Qué bien! Es finde!")
 
-# Dictionaries
+# ------------- Dictionaries -------------
 
 teacher = {
   "name": "David",
@@ -36,3 +36,37 @@ print("Soy " + teacher["name"] + ", tengo " + str(teacher["age"]) + " años y es
 
 for skill in teacher["skills"]:
   print(skill)
+
+# ------------- Functions -------------
+
+# Define/Declarate function
+def calculator(num1, num2, operation):
+  if(operation == "sumar"):
+    total = num1 + num2
+  elif(operation == "restar"):
+    total = num1 - num2
+  else:
+    total = "Error"
+  
+  return total
+
+# Call/Invoke function
+result = calculator(3, 7, "sumar")
+print(result)
+
+result = calculator(3, 7, "restar")
+print(result)
+
+result = calculator(3, 7, "alcachofear")
+print(result)
+
+# Example w/ lists
+def duplicateList(myList):
+  result = []
+
+  for elem in myList:
+    result.append(elem * 2)
+
+  return result
+
+newList = duplicateList([3, 5])
