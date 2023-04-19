@@ -18,69 +18,63 @@
 
 Esto es una clase, de la que se pueden instanciar objetos:
 
-```
-class Horse:
-    alive = True
+    class Horse:
+      alive = True
 
-    def __init__(self, name = '', speed = 10):
+      def __init__(self, name = '', speed = 10):
         self.name = name
         self.speed = speed
 
-    def run(self):
+      def run(self):
         if self.alive:
-            self.speed += 5
+          self.speed += 5
 
-            if self.speed > 50:
-                self.alive = False
+          if self.speed > 50:
+            self.alive = False
         else:
-            print('No puedo más')
+          print('No puedo más')
 
-    def brake(self):
+      def brake(self):
         self.speed -= 5
 
-    def say(self, something):
+      def say(self, something):
         print(something)
 
-caballoNormal = Horse()
-caballoNormal.speed = 25
-print(f"{caballoNormal.name}, {caballoNormal.speed}")
+    caballoNormal = Horse()
+    caballoNormal.speed = 25
+    print(f"{caballoNormal.name}, {caballoNormal.speed}")
 
-yeguaRapida = Horse(speed = 20)
-print(f"{yeguaRapida.name}, {yeguaRapida.speed}")
+    yeguaRapida = Horse(speed = 20)
+    print(f"{yeguaRapida.name}, {yeguaRapida.speed}")
 
-laDelCid = Horse("Babieca", 15)
-laDelCid.run()
-laDelCid.say("Ou yeah")
-```
+    laDelCid = Horse("Babieca", 15)
+    laDelCid.run()
+    laDelCid.say("Ou yeah")
 
 Una clase puede heredar de otra, redefiniendo o añadiendo propiedades y/o métodos:
 
-```
-class Meara(Horse):
-    def __init__(self, name = '', speed = 30):
+    class Meara(Horse):
+      def __init__(self, name = '', speed = 30):
         super().__init__(name, speed)
         self.country = 'Rohan'
-    def beMagic(self):
+      def beMagic(self):
         print('Soy increíble')
 
-elDeGandalf = Meara(name = "Sombragrís")
-print(f"{elDeGandalf.name}, {elDeGandalf.speed}, {elDeGandalf.country}")
-```
+    elDeGandalf = Meara(name = "Sombragrís")
+    print(f"{elDeGandalf.name}, {elDeGandalf.speed}, {elDeGandalf.country}")
 
 ## 3. Métodos especiales
 
 Además del constructor, en Python existen otros métodos especiales para sobrecargar otros "métodos mágicos" u operadores por defecto:
 
-```
-class MagnifiedList:
-    def __init__(self, normalList):
+    class MagnifiedList:
+      def __init__(self, normalList):
         self.data = normalList
-    def __len__(self):
+      def __len__(self):
         return len(self.data) + 2
 
-myList = MagnifiedList([1, 2, 3])
-print(len(myList))
-```
+    myList = MagnifiedList([1, 2, 3])
+    print(len(myList))
 
 ## Referencias
 

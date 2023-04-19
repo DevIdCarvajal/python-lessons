@@ -13,32 +13,25 @@
 - Extensión de Python para VS Code: [https://marketplace.visualstudio.com/items?itemName=ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - Git: [https://git-scm.com/download/](https://git-scm.com/download/)
 
-
 ## 1. Nuestra primera aplicación Python: "Hola Mundo"
 
-1. Crear un fichero hello.py
+1. Crear un fichero `hello.py`
 2. Añadir estas dos líneas:
 
-    ```
-    msg = "Hello World"
-    print(msg)
-    ```
+        msg = "Hello World"
+        print(msg)
 
 3. Ejecutar fichero en la terminal:
 
 - Windows:
 
-    ```
-    python hello.py
-    ```
+      python hello.py
 
 - Mac/Linux:
 
-    ```
-    python3 hello.py
-    ```
+      python3 hello.py
 
-4. Depurar el fichero (en VS Code):
+1. Depurar el fichero (en VS Code):
 
    - Punto de parada (F9)
    - Modo de depuración (F5)
@@ -46,16 +39,16 @@
 
 ## 2. Instalar paquetes (con entornos virtuales)
 
-1. Crear un fichero standardplot.py
+1. Crear un fichero `standardplot.py`
 
 2. Añadir estas líneas:
    
-    import matplotlib.pyplot as plt
-    import numpy as np
+        import matplotlib.pyplot as plt
+        import numpy as np
 
-    x = np.linspace(0, 20, 100)
-    plt.plot(x, np.sin(x))
-    plt.show()
+        x = np.linspace(0, 20, 100)
+        plt.plot(x, np.sin(x))
+        plt.show()
 
 3. Ejecutar y depurar el script (error de dependencias)
 
@@ -63,10 +56,8 @@
 
 - Windows:
   
-    ```
-    py -3 -m venv .venv
-    .venv\scripts\activate
-    ```
+      py -3 -m venv .venv
+      .venv\scripts\activate
 
     En caso del error:
 
@@ -74,40 +65,31 @@
 
     Introducir esto en la PowerShell:
 
-    ```
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-    ```
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
 - Mac/Linux:
 
-    ```
-    python3 -m venv .venv
-    source .venv/bin/activate
-    ```
+      python3 -m venv .venv
+      source .venv/bin/activate
 
-1. Seleccionar el entorno virtual  
-   (Ctrl+Shift+P > Python: Select Interpreter)
+1. Seleccionar el entorno virtual
+
+    (Ctrl+Shift+P > Python: Select Interpreter)
 
 2. Instalar los paquetes:
 
 - Windows:
   
-    ```
-    python -m pip install matplotlib
-    ```
+      python -m pip install matplotlib
 
 - Mac:
 
-    ```
-    python3 -m pip install matplotlib
-    ```
+      python3 -m pip install matplotlib
 
 - Linux:
 
-    ```
-    apt-get install python3-tk
-    python3 -m pip install matplotlib
-    ```
+      apt-get install python3-tk
+      python3 -m pip install matplotlib
 
 ## Referencias
 

@@ -11,62 +11,48 @@
 
 Esto son (asignaciones de) variables:
 
-```
-name = 'Espagueti'
-lastname = "Volador"
-age = 16
-```
+    name = 'Espagueti'
+    lastname = "Volador"
+    age = 16
 
 Podemos mostrar su valor:
 
-```
-print(name)
-```
+    print(name)
 
 Y su tipo:
 
-```
-print(type(name))
-```
+    print(type(name))
 
 Python presenta todos estos tipos:
 
-```
-String - str
-Integer - int
-Float - float
-Complex - complex
-Boolean - bool
-List - list
-Tuple - tuple
-Set - set
-Dictionary - dict
-None
-```
+    String - str
+    Integer - int
+    Float - float
+    Complex - complex
+    Boolean - bool
+    List - list
+    Tuple - tuple
+    Set - set
+    Dictionary - dict
+    None
 
 Podemos capturar un valor y asignárselo:
 
-```
-name = input("Escribe tu nombre: ")
-print(name)
-```
+    name = input("Escribe tu nombre: ")
+    print(name)
 
 Convertirlo (casting):
 
-```
-age = int(input("Escribe tu edad: "))
-print(age)
-```
+    age = int(input("Escribe tu edad: "))
+    print(age)
 
 Si es un string, concatenar varios:
 
-```
-# - Con el operador:
-print("Hola, " + name + " " + lastname + ", tienes " + age + " años")
+    # Con el operador:
+    print("Hola, " + name + " " + lastname + ", tienes " + age + " años")
 
-# - Con la notación f-string:
-print(f"Adiós, {name} {lastname}, tienes {age} años")
-```
+    # Con la notación f-string:
+    print(f"Adiós, {name} {lastname}, tienes {age} años")
 
 ## 2. Listas, tuplas y diccionarios
 
@@ -74,141 +60,117 @@ print(f"Adiós, {name} {lastname}, tienes {age} años")
 
 Esto son ejemplos de listas:
 
-```
-colors = ["red", "blue", "green"]
-stuff = ["thing", 3, True]
-```
+    colors = ["red", "blue", "green"]
+    stuff = ["thing", 3, True]
 
 Se accede por su índice numérico (empieza en cero, acaba en menos uno):
 
-```
-print(colors[0])
-print(colors[-1])
-```
+    print(colors[0])
+    print(colors[-1])
 
 Se pueden añadir y eliminar elementos:
 
-```
-colors.remove("blue")
-colors.append("orange")
-print(colors)
-```
+    colors.remove("blue")
+    colors.append("orange")
+    print(colors)
 
 Se pueden recorrer:
 
-```
-for color in colors:
-    print(color)
-```
+    for color in colors:
+      print(color)
 
 ### Tuplas
 
 Esto es un ejemplo de tupla:
 
-```
-position = (2, 3, -1)
-```
+    position = (2, 3, -1)
 
 Las tuplas no se pueden modificar parcialmente, pero sí totalmente:
 
-```
-position.remove(2) # Error
-```
+    position.remove(2) # Error
 
 ### Diccionarios
 
 Esto son ejemplos de diccionarios:
 
-```
-dictionary = {1:"X", "X":2}
-godness = {"name": 'Unicornio', "lastname": 'Rosa Invisible', 'age': 31}
-```
+    dictionary = {1:"X", "X":2}
+    godness = {"name": 'Unicornio', "lastname": 'Rosa Invisible', 'age': 31}
 
 Se accede por su clave:
 
-```
-print(dictionary[1])
-print(godness["name"])
-```
+    print(dictionary[1])
+    print(godness["name"])
 
 Se pueden añadir y eliminar elementos:
 
-```
-godness["place"] = "rainbow"
-print(godness)
+    godness["place"] = "rainbow"
+    print(godness)
 
-godness.pop("place")
-print(godness)
+    godness.pop("place")
+    print(godness)
 
-# Otra opción para borrar:
-# del godness["place"]
-```
+    # Otra opción para borrar:
+    del godness["place"]
 
 Se pueden recorrer:
 
-```
-# Claves:
+    # Claves:
 
-for key in godness:
-    print(key)
+    for key in godness:
+      print(key)
 
-# Otra forma:
+    # Otra forma:
 
-for key in thisdict.keys():
-    print(key)
+    for key in thisdict.keys():
+      print(key)
 
-# Valores:
+    # Valores:
 
-for value in godness:
-    print(godness[value])
+    for value in godness:
+      print(godness[value])
 
-# Otra forma:
+    # Otra forma:
 
-for value in godness.values():
-    print(value)
+    for value in godness.values():
+      print(value)
 
-# Claves y valores:
+    # Claves y valores:
 
-for key, value in godness.items():
-    print(key, value)
-```
+    for key, value in godness.items():
+      print(key, value)
 
 ## 3. Condicionales y bucles
 
 Para las estructuras de control de flujo se usan operadores de comparación y operadores lógicos:
 
-```
-== != < <= > >=
-and or not
-```
+    == != < <= > >=
+    and or not
 
 ### Condicionales
 
-```
-a = 1
-b = 2
-if b > a:
-    print("b es mayor que a")
-```
+    a = 1
+    b = 2
+
+    if b > a:
+      print("b es mayor que a")
 
 Puede haber condicionales de dos o más ramas:
 
-```
-a = 1
-b = 2
-c = 3
-if a > b:
-    print("a es mayor que b")
-else:
-    print("b es mayor que a")
+    a = 1
+    b = 2
+    c = 3
 
-if a > c:
-    print("a es mayor que c")
-elif a > b:
-    print("a es mayor que b")
-else:
-    print("a es el más pequeño de todos")
-```
+    if a > b:
+      print("a es mayor que b")
+    else:
+      print("b es mayor que a")
+
+    if a > c:
+      print("a es mayor que c")
+    elif a > b:
+      print("a es mayor que b")
+    else:
+      print("a es el más pequeño de todos")
 
 ### Bucles
 
@@ -218,58 +180,47 @@ Un bucle debe tener tres elementos:
 - Condición de parada
 - Cambios en cada iteración
 
-```
-## While
+    ## While
 
-i = 0
+    i = 0
 
-while i < 5:
-    print(i)
-    i += 1
+    while i < 5:
+      print(i)
+      i += 1
 
-## For .. in
+    ## For .. in
 
-for i in range(5):
-    print(i)
+    for i in range(5):
+      print(i)
 
-for letter in "abracadabra":
-    print(letter)
-
-```
+    for letter in "abracadabra":
+      print(letter)
 
 ## 4. Funciones
 
 Una función se define de la siguiente manera:
 
-```
-def learn():
-    print("¡Estoy aprendiendo Python!")
-```
+    def learn():
+      print("¡Estoy aprendiendo Python!")
 
 Y se la llama así:
 
-```
-learn()
-```
+    learn()
 
 Puede recibir argumentos:
 
-```
-def learn(subject):
-    print(f"¡Estoy aprendiendo {subject}!")
-```
+    def learn(subject):
+      print(f"¡Estoy aprendiendo {subject}!")
 
 Puede devolver valores:
 
-```
-def learnMore(subject, level):
-    print (f"¡Estoy aprendiendo {subject}!")
+    def learnMore(subject, level):
+      print (f"¡Estoy aprendiendo {subject}!")
 
-    return level + 1
+      return level + 1
 
-level = 0
-level = learnMore(subject, level)
-```
+    level = 0
+    level = learnMore(subject, level)
 
 ¡Cuidado con el ámbito (local vs global)!
 
