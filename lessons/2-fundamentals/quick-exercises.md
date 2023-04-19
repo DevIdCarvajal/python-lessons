@@ -38,7 +38,7 @@ Aunque están planteados cubriendo un espectro de dificultad incremental, si te 
 19. Crear una variable de nombre **listaVacia** cuyo valor sea **una lista vacía**
 20. Crear una variable de nombre **listaNumeros** declarada con una **lista de números del 0 al 9 (0, 1, 2...)**
 21. Crear una variable de nombre **listaNumerosPares** declarada con una **lista con los números pares del 0 al 9** (considerando al 0 par)
-22. Crear una variable de nombre **listaBidimensional** declarada con valor **lista [[0, 1, 2], ['a', 'b', 'c']]**
+22. Crear una variable de nombre **listaBidimensional** declarada con valor **[[0, 1, 2], ['a', 'b', 'c']]**
 
 ## Estructuras de control de flujo
 

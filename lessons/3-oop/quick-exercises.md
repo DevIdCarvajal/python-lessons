@@ -10,25 +10,25 @@ Aunque están planteados cubriendo un espectro de dificultad incremental, si te 
 
 ### Declaración
 
-1. Crear un **objeto** de nombre **Coche** que tenga las propiedades **marca, modelo, matricula**
-2. Crear un **objeto** de nombre **Casa** que tenga las propiedades **codPostal, calle, portal, piso**
-3. Crear un **objeto** de nombre **PythonDeveloper** que tenga la propiedad **lista proyectos**
-4. Crear un **objeto** de nombre **Perro** que tenga las propiedades **nombre, raza, color, edad** y los métodos **ladrar (imprime por consola un ladrido) y hacerPopo (devuelve un valor aleatorio entre 0 y 2 incluidos)**
-5. Crear un **objeto** de nombre **Noticia** que tenga las propiedades **titular, cuerpo**
-6. Crear un **objeto** de nombre **Persona** que tenga las propiedades **nombre, apellidos, edad**
-7. Crear un **objeto** de nombre **Avion** que tenga las propiedades y métodos **numPasajeros, despegar (imprime por consola 'despegando'), volar (imprime por consola 'llegando al destino'), aterrizar (imprime por consola 'aterrizando')**
-8. Crear un **objeto** de nombre **Paquete** que tenga una **lista con todos los objetos que contenga el paquete**
-9. Crear un **objeto** de nombre **Pais** que tenga las propiedades **numHabitantes, continente, gentilicio**
+1. Crear una **clase** de nombre **Coche**  que tenga las propiedades **marca, modelo, matricula**, e instanciar un **objeto** de dicha clase
+2. Crear una **clase** de nombre **Casa** que tenga las propiedades **codPostal, calle, portal, piso**, e instanciar un **objeto** de dicha clase
+3. Crear una **clase** de nombre **PythonDeveloper** que tenga la propiedad **listaProyectos**, e instanciar un **objeto** de dicha clase
+4. Crear una **clase** de nombre **Perro** que tenga las propiedades **nombre, raza, color, edad** y los métodos **ladrar (imprime por consola un ladrido) y hacerPopo (devuelve un valor aleatorio entre 0 y 2 incluidos)**, e instanciar un **objeto** de dicha clase
+5. Crear una **clase** de nombre **Noticia** que tenga las propiedades **titular, cuerpo**, e instanciar un **objeto** de dicha clase
+6. Crear una **clase** de nombre **Persona** que tenga las propiedades **nombre, apellidos, edad**, e instanciar un **objeto** de dicha clase
+7. Crear una **clase** de nombre **Avion** que tenga las propiedades y métodos **numPasajeros, despegar (imprime por consola 'despegando'), volar (imprime por consola 'llegando al destino'), aterrizar (imprime por consola 'aterrizando')**, e instanciar un **objeto** de dicha clase
+8. Crear una **clase** de nombre **Paquete** que tenga una **lista con todos los objetos que contenga el paquete**, e instanciar un **objeto** de dicha clase
+9. Crear una **clase** de nombre **Pais** que tenga las propiedades **numHabitantes, continente, gentilicio**, e instanciar un **objeto** de dicha clase
 
 ### Lectura de propiedades
 
 10. Dado un **objeto** de nombre **Portatil**, obtener el valor de la propiedad **marca con .marca** guardándolo en la variable **marcaPortatil**
 11. Dado un **objeto** de nombre **Concierto**, obtener el valor de la propiedad **listaGrupos** guardándolo en la variable **grupos**
-12. Dado un **objeto** de nombre **Led**, obtener el valor de las propiedades **rojo, verde y azul** guardándolo en la variable **tupla RGB(rojo, verde, azul)**
+12. Dado un **objeto** de nombre **Led**, obtener el valor de las propiedades **rojo, verde y azul** guardándolo en la variable **tuplaRGB(rojo, verde, azul)**
 13. Dado un **objeto** de nombre **OhNoError**, obtener el valor de la propiedad **codigo** guardándolo en la variable **codError**
-14. Dado un **objeto** de nombre **Grupo** obtener el valor de la propiedad **de tipo lista integrantes** guardándolo en la variable **integrantes**
-15. Dado un **objeto** de nombre **Impresora** obtener el valor de la propiedad **de tipo diccionario tinta {rojo, verde, azul}** guardándolo en la variable **nivelesTinta**
-16. Dado un **objeto** de nombre **Ventana** obtener el valor de la propiedad **de tipo tupla bidimensional que exprese alto, ancho, posicionX y posicionY** guardándolo en la variable **pixeles**
+14. Dado un **objeto** de nombre **Grupo** obtener el valor de la propiedad **listaIntegrantes** (de tipo lista) guardándolo en la variable **integrantes**
+15. Dado un **objeto** de nombre **Impresora** obtener el valor de la propiedad **diccionario** (de tipo diccionario: `{"rojo", "verde", "azul"}`) guardándolo en la variable **nivelesTinta**
+16. Dado un **objeto** de nombre **Ventana** obtener el valor de la propiedad **dimensiones** (de tipo tupla bidimensional: `((alto, ancho), (posicionX, posicionY))`) guardándolo en la variable **pixeles**
 
 ### Modificación de propiedades
 
