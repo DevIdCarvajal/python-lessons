@@ -3,7 +3,7 @@
 [Programación funcional](https://aprendeconalf.es/docencia/python/ejercicios/programacion-funcional/)  
 [Recursividad](https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion.php)
 
-## Katas Codewars:
+## Katas Codewars
 
 1. [Functional Addition](https://www.codewars.com/kata/538835ae443aae6e03000547/train/python)
 2. [The 'if' function](https://www.codewars.com/kata/54147087d5c2ebe4f1000805/train/python)
