@@ -3,8 +3,8 @@
 ## Índice
 
 [1. Fundamentos de la POO](#1-fundamentos-de-la-poo)  
-[2. Clases](#1-clases)   
-[3. Métodos especiales](#3-metodos-especiales)
+[2. Clases](#2-clases)   
+[3. Métodos especiales](#3-métodos-especiales)
 
 ## 1. Fundamentos de la POO
 

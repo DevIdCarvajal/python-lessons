@@ -5,7 +5,7 @@
 [1. Funciones de orden superior](#1-funciones-de-orden-superior)  
 [2. Iteraciones de orden superior sobre listas](#2-iteraciones-de-orden-superior-sobre-listas)  
 [3. Funciones lambda](#3-funciones-lambda)  
-[4. Comprensión de listas](#4-comprension-de-listas)  
+[4. Comprensión de listas](#4-comprensión-de-listas)  
 [5. Generadores](#5-generadores)  
 [6. Decoradores](#6-decoradores)
 

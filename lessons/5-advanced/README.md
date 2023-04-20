@@ -1,12 +1,12 @@
-# 5. Técnicas avanzadas:
+# 5. Técnicas avanzadas
 
 ## Índice
 
 [1. Manejo de excepciones](#1-manejo-de-excepciones)  
-[2. Gestión de paquetes](#2-gestion-de-paquetes)  
-[3. Entrada/salida de datos](#3-entrada-salida-de-datos)  
+[2. Gestión de paquetes](#2-gestión-de-paquetes)  
+[3. Entrada y salida de datos](#3-entrada-y-salida-de-datos)  
 [4. Expresiones regulares](#4-expresiones-regulares)  
-[5. Serialización de objetos](#5-serializacion-de-objetos)
+[5. Serialización de objetos](#5-serialización-de-objetos)
 
 ## 1. Manejo de excepciones
 
@@ -141,7 +141,7 @@ Y después se usa como un módulo más:
 
     print(c.hump(txt))
 
-## 3. Entrada/salida de datos
+## 3. Entrada y salida de datos
 
 Las operaciones de lectura y escritura en disco se realizan en ficheros, que son estructuras de datos secuenciales de almacenamiento persistente.
 

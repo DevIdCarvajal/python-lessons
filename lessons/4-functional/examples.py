@@ -62,3 +62,46 @@ def entre(limitInf, limitSup):
 
 print(list(filter(entre(2, 8), numbers)))
 print(entre(6,14)(8))
+
+# ------------- Generators -------------
+
+def fibonacciGen(limit):
+  a=0
+  b=1
+  
+  for i in range(limit):
+    yield b
+    a, b = b, a+b
+
+obj = fibonacciGen(100)
+r = ""
+
+while r != "Q":
+  r = input("Quieres otro? (Q para salir)")
+
+  print(next(obj))
+
+# ------------- Decorators -------------
+
+def sayHelloDecorator(decoratedFunction):
+
+  def giveSuperPowers():
+    print("Hello")
+
+    decoratedFunction()
+
+    print("Bye")
+  
+  return giveSuperPowers
+
+@sayHelloDecorator
+def printAdaName():
+  print("Ada")
+
+@sayHelloDecorator
+def doSomething():
+  for i in range(3):
+    print(i)
+
+printAdaName()
+doSomething()

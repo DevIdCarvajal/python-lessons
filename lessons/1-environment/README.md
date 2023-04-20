@@ -3,7 +3,7 @@
 ## Índice
 
 [0. Prerrequisitos](#0-prerrequisitos)  
-[1. Nuestra primera aplicación Python: "Hola Mundo"](#1-nuestra-primera-aplicación-python-"hola-mundo")  
+[1. Hola Mundo](#1-hola-mundo)  
 [2. Instalar paquetes (con entornos virtuales)](#2-instalar-paquetes-con-entornos-virtuales)
 
 ## 0. Prerrequisitos
@@ -13,7 +13,7 @@
 - Extensión de Python para VS Code: [https://marketplace.visualstudio.com/items?itemName=ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - Git: [https://git-scm.com/download/](https://git-scm.com/download/)
 
-## 1. Nuestra primera aplicación Python: "Hola Mundo"
+## 1. Hola Mundo
 
 1. Crear un fichero `hello.py`
 2. Añadir estas dos líneas:
