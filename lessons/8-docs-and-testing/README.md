@@ -17,7 +17,7 @@ El código Python se puede documentar fácilmente mediante Docstrings:
 
     help(square)
 
-O se puede utilizar el paquete sphinx.
+O se puede utilizar el paquete Sphinx.
 
 ## 2. Pruebas unitarias
 
@@ -95,7 +95,14 @@ Lo que implica ajustar el código para que pase el test (sin dejar de pasar el r
 
 Y así sucesivamente para todos los casos que se deseen contemplar (tildes, etc.).
 
+Otra opción es utilizar el paquete Pytest.
+
 ## Referencias
 
+[Tutorial de docstrings](https://www.programiz.com/python-programming/docstrings)  
+[Tutorial de Sphinx](https://medium.com/qu4nt/documentaci%C3%B3n-con-sphinx-y-python-9a777403cb68)  
+[Documentación Sphinx](https://www.sphinx-doc.org/en/master/)
+
+[Pruebas unitarias con doctest](https://docs.hektorprofe.net/python/documentacion-y-pruebas/doctest/)  
 [Metodología TDD](https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/que-es-el-test-driven-development/)  
-[Pruebas unitarias con doctest](https://docs.hektorprofe.net/python/documentacion-y-pruebas/doctest/)
+[Pytest](https://tutoriales.edu.lat/pub/pytest/pytest-quick-guide/pytest-guia-rapida)
