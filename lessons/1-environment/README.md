@@ -4,7 +4,8 @@
 
 [0. Prerrequisitos](#0-prerrequisitos)  
 [1. Hola Mundo](#1-hola-mundo)  
-[2. Instalar paquetes (con entornos virtuales)](#2-instalar-paquetes-con-entornos-virtuales)
+[2. Entornos virtuales](#2-entornos-virtuales)  
+[3. Gestión de paquetes](#3-gestión-de-paquetes)
 
 ## 0. Prerrequisitos
 
@@ -37,61 +38,62 @@
    - Modo de depuración (F5)
    - Consola de depuración
 
-## 2. Instalar paquetes (con entornos virtuales)
+## 2. Entornos virtuales
 
-1. Crear un fichero `standardplot.py`
+Se pueden crear fácilmente instancias secundarias del intérprete de Python de manera que estas tengan su propio contexto, independientemente de la instancia principal.
 
-2. Añadir estas líneas:
-   
-        import matplotlib.pyplot as plt
-        import numpy as np
+Estas instancias son conocidas como entornos virtuales, y actúan como contenedores aislados y encapsulados, permitiendo generar así entornos seguros de pruebas, sin "ensuciar" el entorno principal.
 
-        x = np.linspace(0, 20, 100)
-        plt.plot(x, np.sin(x))
-        plt.show()
+Para gestionar y trabajar con entornos virtuales, se puede utilizar el paquete `virtualenv`, que se instala con `pip`:
 
-3. Ejecutar y depurar el script (error de dependencias)
+    pip install virtualenv
 
-4. Crear y activar el entorno virtual
-
-- Windows:
+  - Crear entorno:
   
-      py -3 -m venv .venv
-      .venv\scripts\activate
+        virtualenv my-env
 
-    En caso del error:
-
-    "Activate.ps1 is not digitally signed. You cannot run this script on the current system."
-
-    Introducir esto en la PowerShell:
-
-      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-
-- Mac/Linux:
-
-      python3 -m venv .venv
-      source .venv/bin/activate
-
-1. Seleccionar el entorno virtual
-
-    (Ctrl+Shift+P > Python: Select Interpreter)
-
-2. Instalar los paquetes:
-
-- Windows:
+  - Activar entorno:
   
-      python -m pip install matplotlib
+        source my-env/bin/activate
 
-- Mac:
+  - Desactivar entorno:
+  
+        deactivate
 
-      python3 -m pip install matplotlib
+Para el caso de Visual Studio Code, se debe seleccionar el entorno virtual en el que se va a trabajar, pulsando `Ctrl+Shift+P` y después seleccionando `Python: Select Interpreter`.
 
-- Linux:
+## 3. Gestión de paquetes
 
-      apt-get install python3-tk
-      python3 -m pip install matplotlib
+El gestor de paquetes de Python, conocido como `pip`, es dependiente del entorno, de manera que los paquetes instalados en un entorno no afectan al de otro.
+
+Esto, entre otras ventajas, tiene por ejemplo la de que permite desarrollar aplicaciones que trabajen con distintas versiones de intérpretes o de módulos.
+
+Una vez creado y activado un entorno, podemos instalar paquetes:
+
+    pip install matplotlib
+
+Listar paquetes instalados:
+
+    pip list matplotlib
+
+Desinstalar paquetes:
+
+    pip uninstall matplotlib
+
+Buscar paquetes:
+
+    pip search requests
+
+Crear un fichero con la lista de paquetes instalados y sus versiones actuales:
+
+    pip freeze > requirements.txt
+
+Que se puede reutilizar para instalar rápidamente esos mismos paquetes en otro entorno:
+
+    pip install -r requirements.txt
 
 ## Referencias
 
 [Documentación oficial de VS Code](https://code.visualstudio.com/docs/python/python-tutorial#_install-and-use-packages)  
-[Entornos virtuales con Python](https://code.tutsplus.com/es/tutorials/understanding-virtual-environments-in-python--cms-28272)
+[Entornos virtuales con Python (I)](https://openwebinars.net/blog/entornos-de-desarrollo-virtuales-con-python3/)  
+[Entornos virtuales con Python (II)](https://code.tutsplus.com/es/tutorials/understanding-virtual-environments-in-python--cms-28272)
