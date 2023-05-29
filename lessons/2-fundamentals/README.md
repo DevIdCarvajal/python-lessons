@@ -182,19 +182,19 @@ Un bucle debe tener tres elementos:
 
     ## While
 
-    i = 0
+      i = 0
 
-    while i < 5:
-      print(i)
-      i += 1
+      while i < 5:
+        print(i)
+        i += 1
 
     ## For .. in
 
-    for i in range(5):
-      print(i)
+      for i in range(5):
+        print(i)
 
-    for letter in "abracadabra":
-      print(letter)
+      for letter in "abracadabra":
+        print(letter)
 
 ## 4. Funciones
 
