@@ -3,7 +3,7 @@
 ## Índice
 
 [1. Variables, tipos de datos y operadores](#1-variables-tipos-de-datos-y-operadores)  
-[2. Listas, tuplas y diccionarios](#2-listas-tuplas-y-diccionarios)  
+[2. Listas, tuplas, diccionarios y conjuntos](#2-listas-tuplas-diccionarios-y-conjuntos)  
 [3. Condicionales y bucles](#3-condicionales-y-bucles)  
 [4. Funciones](#4-funciones)
 
@@ -54,7 +54,7 @@ Si es un string, concatenar varios:
     # Con la notación f-string:
     print(f"Adiós, {name} {lastname}, tienes {age} años")
 
-## 2. Listas, tuplas y diccionarios
+## 2. Listas, tuplas, diccionarios y conjuntos
 
 ### Listas
 
@@ -138,6 +138,40 @@ Se pueden recorrer:
 
     for key, value in godness.items():
       print(key, value)
+
+### Conjuntos
+
+Este es un ejemplo de conjunto:
+
+    colorBalls = {"red", "blue", "green"}
+
+Como son estructuras de datos no indexadas, no es posible acceder directamente a sus elementos, pero sí se pueden añadir:
+
+    colorBalls.add("black")
+
+Se puede comprobar si existe (o no) un elemento para, por ejemplo, borrarlo:
+
+    if "blue" in colorBalls:
+      colorBalls.remove("blue")
+
+Se pueden recorrer:
+
+    for ball in colorBalls:
+      print(ball)
+
+Se pueden unir dos conjuntos para crear conjuntos nuevos:
+
+    colorBalls = {"red", "blue", "green"}
+    numberBalls = {1, 2, 3}
+
+    totalBalls = colorBalls.union(numberBalls)
+
+O buscar la intersección entre dos conjuntos para ver sus elementos comunes:
+
+    balls1 = {"red", 2, "green", 4}
+    balls2 = {1, 2, "green", 3}
+
+    commonBalls = balls1.intersection(balls2)
 
 ## 3. Condicionales y bucles
 
