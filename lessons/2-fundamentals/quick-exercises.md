@@ -65,4 +65,4 @@ Aunque están planteados cubriendo un espectro de dificultad incremental, si te 
 40. Crear la función **obtenerImpares** que acepte como argumento **una lista de números** y devuelva una **lista con los elementos impares**
 41. Crear la función **sumarLista** que acepte como argumento **una lista numérica** y devuelva **la suma de los números en la lista, por ejemplo: [1, 2, 3] => 6**
 42. Crear la función **multiplicarLista** que acepte como argumento **una lista numérica** y devuelva **la multiplicación de los números en la lista, por ejemplo: [2, 3, 4] => 24**
-42. Crear la función **multiplicacionPro** que acepte como argumentos **dos números** y devuelva **el resultado de su multiplicación**, pero NO PUEDE usar el operador de multiplicación (`*`) para calcularlo
+43. Crear la función **multiplicacionPro** que acepte como argumentos **dos números** y devuelva **el resultado de su multiplicación**, pero NO PUEDE usar el operador de multiplicación (`*`) para calcularlo ni usar otras funciones realizadas previamente. Es decir, solo puede usar el operador suma (`+`).

@@ -27,7 +27,7 @@ Aunque están planteados cubriendo un espectro de dificultad incremental, si te 
 12. Dado un **objeto** de nombre **Led**, obtener el valor de las propiedades **rojo, verde y azul** guardándolo en la variable **tuplaRGB(rojo, verde, azul)**
 13. Dado un **objeto** de nombre **OhNoError**, obtener el valor de la propiedad **codigo** guardándolo en la variable **codError**
 14. Dado un **objeto** de nombre **Grupo** obtener el valor de la propiedad **listaIntegrantes** (de tipo lista) guardándolo en la variable **integrantes**
-15. Dado un **objeto** de nombre **Impresora** obtener el valor de la propiedad **diccionario** (de tipo diccionario: `{"rojo", "verde", "azul"}`) guardándolo en la variable **nivelesTinta**
+15. Dado un **objeto** de nombre **Impresora** obtener el valor de la propiedad **tinta** (de tipo diccionario: `{"rojo": 100, "verde": 100, "azul": 100}`) guardándolo en la variable **nivelesTinta**
 16. Dado un **objeto** de nombre **Ventana** obtener el valor de la propiedad **dimensiones** (de tipo tupla bidimensional: `((alto, ancho), (posicionX, posicionY))`) guardándolo en la variable **pixeles**
 
 ### Modificación de propiedades
