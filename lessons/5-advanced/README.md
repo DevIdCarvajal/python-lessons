@@ -143,6 +143,8 @@ Y después se usa como un módulo más:
 
 ## 3. Entrada y salida de datos
 
+### Ficheros
+
 Las operaciones de lectura y escritura en disco se realizan en ficheros, que son estructuras de datos secuenciales de almacenamiento persistente.
 
 Para empezar a trabajar con un fichero, es necesario abrirlo especificando el modo de acceso:
@@ -171,9 +173,35 @@ Finalmente y tras realizar las operaciones deseadas, el fichero debe cerrarse:
 
     myFile.close()
 
+### Por línea de comandos
+
+Otra forma de proporcionar una entrada de datos a los scripts de Python es mediante la consola de comandos, al llamar al intérprete para ejecutar el código de un script:
+
+    python myscript.py hola mundo
+
+Cuyo contenido sea, por ejemplo, el siguiente:
+
+    import sys
+
+    print(f"Mi script se llama: {sys.argv[0]}")
+    print(f"Y tiene {len(sys.argv)} parámetros")
+    print(f"Que son estos: {sys.argv}")
+
 ## 4. Expresiones regulares
 
 Las expresiones regulares (también llamadas *regexp* o *regex*) definen patrones para strings. Permiten reconocer si un string determinado cumple un determinado patrón, lo que puede ser útil para por ejemplo validar formularios entre otras aplicaciones.
+
+En Python es posible trabajar con expresiones regulares gracias al módulo `re` y las funciones específicas que proporciona para buscar, reemplazar, etc.:
+
+    import re
+
+    text = "La lluvia en Sevilla es una maravilla"
+    result = re.search("^La.*maravilla$", text)
+
+    print(result.string)
+
+    result = re.findall("villa", text)
+    print(result)
 
 ## 5. Serialización de objetos
 
