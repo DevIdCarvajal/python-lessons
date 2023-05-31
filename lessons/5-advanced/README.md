@@ -141,6 +141,26 @@ Y después se usa como un módulo más:
 
     print(c.hump(txt))
 
+Se pueden también listar paquetes instalados:
+
+    pip list numpy
+
+Desinstalar paquetes:
+
+    pip uninstall numpy
+
+Buscar paquetes:
+
+    pip search requests
+
+Crear un fichero con la lista de paquetes instalados y sus versiones actuales:
+
+    pip freeze > requirements.txt
+
+Que se puede reutilizar para instalar rápidamente esos mismos paquetes en otro entorno:
+
+    pip install -r requirements.txt
+
 ## 3. Entrada y salida de datos
 
 ### Ficheros
