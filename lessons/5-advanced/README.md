@@ -279,7 +279,6 @@ Y leerlos de nuevo:
 [Gestor de paquetes](https://www.w3schools.com/python/python_pip.asp)  
 [Módulos](https://www.w3schools.com/python/python_modules.asp)  
 [Manejo de ficheros](https://www.w3schools.com/python/python_file_handling.asp)  
-[Argumentos por línea de comandos](https://www.pythonforbeginners.com/system/python-sys-argv)  
-[Tutorial regex](https://regexlearn.com/es/learn/regex101)  
+[Argumentos por línea de comandos](https://www.pythonforbeginners.com/system/python-sys-argv)    
 [Referencia regex](https://regexr.com/)  
 [El módulo re](https://www.w3schools.com/python/python_regex.asp)

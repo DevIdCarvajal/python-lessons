@@ -34,6 +34,8 @@ def readFile():
       return True
     except:
       print("Problemas")
+
+      return False
     finally:
       myFile.close()
   else:
