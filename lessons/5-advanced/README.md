@@ -281,4 +281,5 @@ Y leerlos de nuevo:
 [Manejo de ficheros](https://www.w3schools.com/python/python_file_handling.asp)  
 [Argumentos por línea de comandos](https://www.pythonforbeginners.com/system/python-sys-argv)    
 [Referencia regex](https://regexr.com/)  
+[regex examples](https://uibakery.io/regex-library/email-regex-python)  
 [El módulo re](https://www.w3schools.com/python/python_regex.asp)

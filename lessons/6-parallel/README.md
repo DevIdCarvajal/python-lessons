@@ -17,50 +17,48 @@ Ejemplo de cliente:
 
     import socket
 
-    s = socket.socket()
+    client = socket.socket()
 
-    s.connect(("localhost", 9999))
+    client.connect(("localhost", 9999))
 
     while True:
-      mensaje = input("Mensaje a enviar: ")
+      message = input("Mensaje a enviar: ")
 
-      s.send(mensaje.encode())
+      client.send(message.encode())
 
-      if mensaje == "close":
+      if message == "cerrar":
         break
 
     print("Taluego, servidor!")
 
-    s.close()
+    client.close()
 
 Ejemplo de servidor:
 
     import socket
 
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    s.bind(("", 9999))
+    server.bind(("", 9999))
+    server.listen(1)
 
-    s.listen(1)
-
-    sc, addr = s.accept()
+    serverConnection, addresses = server.accept()
 
     while True:
+      receivedInBytes = serverConnection.recv(1024)
+      received = receivedInBytes.decode()
 
-      recibidoBytes = sc.recv(1024)
-      recibido = recibidoBytes.decode()
+      if received == "cerrar":
+        break
 
-      if recibido == "close":
-          break
+      print(str(addresses[0]) + " dice: ", received)
 
-      print(str(addr[0]) + " dice: ", recibido)
-
-      sc.send(recibidoBytes)
+      serverConnection.send(receivedInBytes)
 
     print("Taluego, cliente!")
 
-    sc.close()
-    s.close()
+    serverConnection.close()
+    server.close()
 
 ## 2. Threads
 
@@ -74,11 +72,11 @@ En Python se pueden generar y ejecutar procesos fácilmente a partir de funcione
 
     import threading
 
-    def print_cube(num):
-      print(f"Cubo: {num * num * num}")
-
     def print_square(num):
-      print(f"Cuadrado: {num * num}")
+      print(f"Cuadrado: {num**2}")
+
+    def print_cube(num):
+      print(f"Cubo: {num**3}")
 
     # Ejecutado solo en el programa principal
     if __name__ =="__main__":
