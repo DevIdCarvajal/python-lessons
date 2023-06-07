@@ -178,6 +178,23 @@ Además, es posible también usar expresiones para manipular los elementos una v
     # Option 2
     skillsWithO = [skill if skill != "coding" else "programming" for skill in skills]
 
+También puede ser útil esta técnica para estructuras de datos un poco más complejas, tales como listas de diccionarios:
+
+    kings = [{
+      "id": 1,
+      "name": "Chindasvinto Metepata"
+    }, {
+      "id": 2,
+      "name": "Isabel Según Da"
+    }]
+
+    def deleteKing(kings, id):
+      return [king for king in kings if king["id"] != id]
+
+    kings = deleteKing(kings, 1)
+
+    print(kings)
+
 ## 5. Generadores
 
 Son funciones capaces de generar un sinfín de resultados obtenidos "poco a poco", es decir, en pasos sucesivos y en tiempo de ejecución, lo que implica un menor coste de recursos:

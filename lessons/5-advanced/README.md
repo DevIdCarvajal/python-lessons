@@ -143,15 +143,7 @@ Y después se usa como un módulo más:
 
 Se pueden también listar paquetes instalados:
 
-    pip list numpy
-
-Desinstalar paquetes:
-
-    pip uninstall numpy
-
-Buscar paquetes:
-
-    pip search requests
+    pip list
 
 Crear un fichero con la lista de paquetes instalados y sus versiones actuales:
 

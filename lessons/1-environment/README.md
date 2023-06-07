@@ -68,29 +68,7 @@ El gestor de paquetes de Python, conocido como `pip`, es dependiente del entorno
 
 Esto, entre otras ventajas, tiene por ejemplo la de que permite desarrollar aplicaciones que trabajen con distintas versiones de intérpretes o de módulos.
 
-Una vez creado y activado un entorno, podemos instalar paquetes:
-
-    pip install matplotlib
-
-Listar paquetes instalados:
-
-    pip list matplotlib
-
-Desinstalar paquetes:
-
-    pip uninstall matplotlib
-
-Buscar paquetes:
-
-    pip search requests
-
-Crear un fichero con la lista de paquetes instalados y sus versiones actuales:
-
-    pip freeze > requirements.txt
-
-Que se puede reutilizar para instalar rápidamente esos mismos paquetes en otro entorno:
-
-    pip install -r requirements.txt
+Una vez creado y activado un entorno, podemos instalar paquetes con `pip`.
 
 ## Referencias
 
