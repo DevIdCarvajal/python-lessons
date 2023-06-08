@@ -1,4 +1,5 @@
 from os.path import exists
+from platform import platform
 
 def writeFile():
   try:
@@ -13,7 +14,12 @@ def writeFile():
       next = input("Escribe lo siguiente (.quit para salir): ")
 
       if next != ".quit":
-        myFile.write(next + "\r\n")
+        if platform() == "Linux":
+          myFile.write(next + "\n")
+        elif platform() == "Mac":
+          myFile.write(next + "\r")
+        else: # Windows
+          myFile.write(next + "\r\n")
   except:
     print("Problemas")
   finally:

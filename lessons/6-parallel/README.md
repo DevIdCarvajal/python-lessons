@@ -15,9 +15,9 @@ Python nos proporciona el módulo `socket` para implementar la programación de 
 
 Ejemplo de cliente:
 
-    import socket
+    from socket import socket
 
-    client = socket.socket()
+    client = socket()
 
     client.connect(("localhost", 9999))
 
@@ -35,9 +35,9 @@ Ejemplo de cliente:
 
 Ejemplo de servidor:
 
-    import socket
+    from socket import socket
 
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server = socket()
 
     server.bind(("", 9999))
     server.listen(1)
@@ -51,7 +51,7 @@ Ejemplo de servidor:
       if received == "cerrar":
         break
 
-      print(str(addresses[0]) + " dice: ", received)
+      print(f"{addresses[0]} dice: {received}")
 
       serverConnection.send(receivedInBytes)
 
@@ -70,20 +70,20 @@ Si un proceso es un programa en ejecución, los hilos son subprocesos creados po
 
 En Python se pueden generar y ejecutar procesos fácilmente a partir de funciones:
 
-    import threading
+    from threading import Thread
 
-    def print_square(num):
+    def printSquare(num):
       print(f"Cuadrado: {num**2}")
 
-    def print_cube(num):
+    def printCube(num):
       print(f"Cubo: {num**3}")
 
     # Ejecutado solo en el programa principal
-    if __name__ =="__main__":
+    if __name__ == "__main__":
       
       # Crear threads
-      t1 = threading.Thread(target=print_square, args=(10,))
-      t2 = threading.Thread(target=print_cube, args=(10,))
+      t1 = Thread(target=printSquare, args=(10,))
+      t2 = Thread(target=printCube, args=(10,))
 
       # Ejecutar threads
       t1.start()
@@ -97,24 +97,24 @@ En Python se pueden generar y ejecutar procesos fácilmente a partir de funcione
 
 Tanto los procesos (incluyendo el del programa principal) como los threads tienen un nombre así como un identificador (pid), que es posible conocer:
 
-    import threading
-    import os
+    from threading import current_thread, Thread
+    from os import getpid
 
     def task1():
-      print(f"Tarea 1 - Thread {threading.current_thread().name}")
-      print(f"pid del proceso de la tarea 1: {os.getpid()}")
+      print(f"Tarea 1 - Thread {current_thread().name}")
+      print(f"pid del proceso de la tarea 1: {getpid()}")
 
     def task2():
-      print(f"Tarea 2 - Thread {threading.current_thread().name}")
-      print(f"pid del proceso de la tarea 2: {os.getpid()}")
+      print(f"Tarea 2 - Thread {current_thread().name}")
+      print(f"pid del proceso de la tarea 2: {getpid()}")
 
     if __name__ == "__main__":
 
-      print(f"Programa principal - Thread {threading.current_thread().name}")
-      print(f"pid del proceso del programa principal: {os.getpid()}")
+      print(f"Programa principal - Thread {current_thread().name}")
+      print(f"pid del proceso del programa principal: {getpid()}")
 
-      t1 = threading.Thread(target=task1, name='tarea1')
-      t2 = threading.Thread(target=task2, name='tarea2')
+      t1 = Thread(target=task1, name='tarea1')
+      t2 = Thread(target=task2, name='tarea2')
 
       t1.start()
       t2.start()
@@ -124,7 +124,7 @@ Tanto los procesos (incluyendo el del programa principal) como los threads tiene
 
 En ocasiones dos o más hilos acceden a los mismos recursos compartidos (también llamados secciones críticas), lo que puede originar condiciones de carrera, que implican resultados distintos dependiendo de qué hilo accedió primero:
 
-    import threading
+    from threading import Thread
 
     def task1():
       for i in range(5):
@@ -134,9 +134,9 @@ En ocasiones dos o más hilos acceden a los mismos recursos compartidos (tambié
       for i in range(5):
         print('Tarea 2')
 
-    if __name__=="__main__":
-      t1 = threading.Thread(target=task1)
-      t2 = threading.Thread(target=task2)
+    if __name__== "__main__":
+      t1 = Thread(target=task1)
+      t2 = Thread(target=task2)
 
       t1.start()
       t2.start()
@@ -146,8 +146,9 @@ En ocasiones dos o más hilos acceden a los mismos recursos compartidos (tambié
 
 Para evitar esto, existen diversos mecanismos como los semáforos o el del siguiente ejemplo, conocido como bloqueo (`Lock`), cerrojo o exclusión mutua:
 
-    import threading
-    lock = threading.Lock()
+    from threading import Lock, Thread
+
+    lock = Lock()
 
     def task1():
       lock.acquire()
@@ -165,9 +166,9 @@ Para evitar esto, existen diversos mecanismos como los semáforos o el del sigui
       
       lock.release()
 
-    if __name__=="__main__":
-      t1 = threading.Thread(target=task1)
-      t2 = threading.Thread(target=task2)
+    if __name__== "__main__":
+      t1 = Thread(target=task1)
+      t2 = Thread(target=task2)
 
       t1.start()
       t2.start()
