@@ -1,13 +1,27 @@
-# 2. Fundamentos de programación en Python
+# 2. Fundamentos
 
 ## Índice
 
-[1. Variables, tipos de datos y operadores](#1-variables-tipos-de-datos-y-operadores)  
-[2. Listas, tuplas, diccionarios y conjuntos](#2-listas-tuplas-diccionarios-y-conjuntos)  
-[3. Condicionales y bucles](#3-condicionales-y-bucles)  
-[4. Funciones](#4-funciones)
+[1. Comentarios](#1-comentarios)  
+[2. Variables](#2-variables)  
+[3. Tipos de datos](#3-tipos-de-datos)  
+[4. Operadores](#4-operadores)  
+[5. Conversión de tipos](#5-conversión-de-tipos)  
+[6. Manejo de cadenas](#6-manejo-de-cadenas)  
+[7. Estructuras de control de flujo](#7-estructuras-de-control-de-flujo)
 
-## 1. Variables, tipos de datos y operadores
+## 1. Comentarios
+
+Los comentarios sirven para hacer anotaciones al código que no serán procesadas por el intérprete:
+
+    # Esto es un comentario de una sola línea
+
+    """
+    Y esto otro
+    de varias líneas
+    """
+
+## 2. Variables
 
 Esto son (asignaciones de) variables:
 
@@ -15,7 +29,7 @@ Esto son (asignaciones de) variables:
     lastname = "Volador"
     age = 16
 
-Podemos mostrar su valor:
+Se puede mostrar su valor:
 
     print(name)
 
@@ -23,162 +37,145 @@ Y su tipo:
 
     print(type(name))
 
-Python presenta todos estos tipos:
-
-    String - str
-    Integer - int
-    Float - float
-    Complex - complex
-    Boolean - bool
-    List - list
-    Tuple - tuple
-    Set - set
-    Dictionary - dict
-    None
-
-Podemos capturar un valor y asignárselo:
+Se puede capturar un valor y asignárselo:
 
     name = input("Escribe tu nombre: ")
     print(name)
 
-Convertirlo (casting):
+Hacer asignaciones múltiples:
 
-    age = int(input("Escribe tu edad: "))
-    print(age)
+    scorePlayer1 = scorePlayer2 = scorePlayer3 = 5
 
-Si es un string, concatenar varios:
+Ejemplos de nombres válidos de variables:
 
-    # Con el operador:
-    print("Hola, " + name + " " + lastname + ", tienes " + age + " años")
+    fullname = "Simone de Beauvoir"
+    full_name = "Miyamoto Mushashi"
+    _full_name = "Ada Lovelace"
+    fullName = "Richard Feynman"
+    FULLNAME = "Clara Campoamor"
+    fullname2 = "Siddartha Gautama"
 
-    # Con la notación f-string:
-    print(f"Adiós, {name} {lastname}, tienes {age} años")
+## 3. Tipos de datos
 
-## 2. Listas, tuplas, diccionarios y conjuntos
+Python presenta todos estos tipos primitivos de datos:
 
-### Listas
+- str (string):
+  
+      "Abracadabra pata de cabra"
 
-Esto son ejemplos de listas:
+- int (Integer):
+  
+      42
 
-    colors = ["red", "blue", "green"]
-    stuff = ["thing", 3, True]
+- float (Float):
+  
+      3.14159
 
-Se accede por su índice numérico (empieza en cero, acaba en menos uno):
+- complex (Complex):
+  
+      9 + 3j
 
-    print(colors[0])
-    print(colors[-1])
+- bool (Boolean):
+  
+      True
+      False
 
-Se pueden añadir y eliminar elementos:
+- None (sin valor)
 
-    colors.remove("blue")
-    colors.append("orange")
-    print(colors)
+## 4. Operadores
+
+Dependiendo del tipo de datos, este soportará unos operadores u otros:
+
+- Los *strings*, concatenación:
+
+      fullname = "Anonymous"
+      age = 25
+      
+      # Con el operador:
+      print("Hola, " + fullname + " tienes " + age + " años")
+
+      # Con la notación f-string:
+      print(f"Adiós, {fullname}, tienes {age} años")
+
+- Los numéricos ofrecen operadores aritméticos:
+
+    - Suma: `1 + 2`
+    - Resta: `3 - 4`
+    - Multiplicación: `6 * 7`
+    - División: `10 / 3`
+    - Potencia: `2 ** 5`
+    - Módulo: `10 % 3`
+    - División entera: `10 // 3`
+
+- Los *booleans*, operadores lógicos:
+
+    - Conjunción:
+
+          True and False
+    
+    - Disyunción:
+
+          True or False
+    
+    - Negación:
+
+          not True
+
+## 5. Conversión de tipos
+
+Es posible convertir variables de un tipo a otro si es necesario:
+
+    intValue = 1
+    floatValue = 2.0
+    strValue = "34"
+
+    floatValueFromInt = float(intValue)
+    intValueFromFloat = int(floatValue)
+    intValueFromStr = int(strValue)
+
+## 6. Manejo de cadenas
+
+Python permite strings multilínea:
+
+    myText = """Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua."""
+
+Para saber la longitud de un string, existe la función `len`:
+
+    print(len(myText))
+
+Se puede comprobar si un *substring* está contenido en otro string con el operador `in`:
+
+    print("tempor" in myText)
+    print("totum" in myText)
+
+Permite escapar caracteres para que no sean interpretados:
+
+    boss = "Me dijo que era un tanto \"impredecible\""
+    print(boss)
+
+O usar caracteres especiales:
+
+    \\ \n \r \t \b
 
 Se pueden recorrer:
 
-    for color in colors:
-      print(color)
+    for x in "banana":
+      print(x)
 
-### Tuplas
+O también obtener un substring de otro:
 
-Esto es un ejemplo de tupla:
+    b = "Hola, Mundo"
+    print(b[:5])
+    print(b[2:])
 
-    position = (2, 3, -1)
+## 7. Estructuras de control de flujo
 
-Las tuplas no se pueden modificar parcialmente, pero sí totalmente:
-
-    position.remove(2) # Error
-
-### Diccionarios
-
-Esto son ejemplos de diccionarios:
-
-    dictionary = {1:"X", "X":2}
-    godness = {"name": 'Unicornio', "lastname": 'Rosa Invisible', 'age': 31}
-
-Se accede por su clave:
-
-    print(dictionary[1])
-    print(godness["name"])
-
-Se pueden añadir y eliminar elementos:
-
-    godness["place"] = "rainbow"
-    print(godness)
-
-    godness.pop("place")
-    print(godness)
-
-    # Otra opción para borrar:
-    del godness["place"]
-
-Se pueden recorrer:
-
-    # Claves:
-
-    for key in godness:
-      print(key)
-
-    # Otra forma:
-
-    for key in thisdict.keys():
-      print(key)
-
-    # Valores:
-
-    for value in godness:
-      print(godness[value])
-
-    # Otra forma:
-
-    for value in godness.values():
-      print(value)
-
-    # Claves y valores:
-
-    for key, value in godness.items():
-      print(key, value)
-
-### Conjuntos
-
-Este es un ejemplo de conjunto:
-
-    colorBalls = {"red", "blue", "green"}
-
-Como son estructuras de datos no indexadas, no es posible acceder directamente a sus elementos, pero sí se pueden añadir:
-
-    colorBalls.add("black")
-
-Se puede comprobar si existe (o no) un elemento para, por ejemplo, borrarlo:
-
-    if "blue" in colorBalls:
-      colorBalls.remove("blue")
-
-Se pueden recorrer:
-
-    for ball in colorBalls:
-      print(ball)
-
-Se pueden unir dos conjuntos para crear conjuntos nuevos:
-
-    colorBalls = {"red", "blue", "green"}
-    numberBalls = {1, 2, 3}
-
-    totalBalls = colorBalls.union(numberBalls)
-
-O buscar la intersección entre dos conjuntos para ver sus elementos comunes:
-
-    balls1 = {"red", 2, "green", 4}
-    balls2 = {1, 2, "green", 3}
-
-    commonBalls = balls1.intersection(balls2)
-
-## 3. Condicionales y bucles
-
-Para las estructuras de control de flujo se usan operadores de comparación y operadores lógicos:
+Para las estructuras de control de flujo se usan operadores lógicos (citados más arriba) y operadores de comparación:
 
     == != < <= > >=
-    and or not
 
 ### Condicionales
 
@@ -214,7 +211,7 @@ Un bucle debe tener tres elementos:
 - Condición de parada
 - Cambios en cada iteración
 
-    ## While
+    #### While
 
       i = 0
 
@@ -222,7 +219,7 @@ Un bucle debe tener tres elementos:
         print(i)
         i += 1
 
-    ## For .. in
+    #### For .. in
 
       for i in range(5):
         print(i)
@@ -230,46 +227,35 @@ Un bucle debe tener tres elementos:
       for letter in "abracadabra":
         print(letter)
 
-## 4. Funciones
+Ambos tipos de bucles permiten el uso de `continue` y `break` para romper el control de flujo:
 
-Una función se define de la siguiente manera:
+    i = 1
+    while i < 5:
+      print(i)
+      i += 1
 
-    def learn():
-      print("¡Estoy aprendiendo Python!")
+      if i == 3:
+        break
 
-Y se la llama así:
+    fruits = ["cereza", "pomelo", "coco"]
 
-    learn()
-
-Puede recibir argumentos:
-
-    def learn(subject):
-      print(f"¡Estoy aprendiendo {subject}!")
-
-Puede devolver valores:
-
-    def learnMore(subject, level):
-      print (f"¡Estoy aprendiendo {subject}!")
-
-      return level + 1
-
-    level = 0
-    level = learnMore(subject, level)
-
-¡Cuidado con el ámbito (local vs global)!
+    for f in fruits:
+      if f == "pomelo":
+        continue
+      
+      print(f)
 
 ## Referencias
 
+[Comentarios](https://www.w3schools.com/python/python_comments.asp)  
 [Variables](https://www.w3schools.com/python/python_variables.asp)  
 [Tipos de datos](https://www.w3schools.com/python/python_variables.asp)  
+[Cadenas](https://www.w3schools.com/python/python_strings.asp)  
+[Números](https://www.w3schools.com/python/python_numbers.asp)  
+[Lógicos](https://www.w3schools.com/python/python_booleans.asp)  
 [Operadores](https://www.w3schools.com/python/python_operators.asp)  
-[Listas](https://www.w3schools.com/python/python_lists.asp)  
-[Tuplas](https://www.w3schools.com/python/python_tuples.asp)  
-[Diccionarios](https://www.w3schools.com/python/python_dictionaries.asp)  
 [Condicionales](https://www.w3schools.com/python/python_conditions.asp)  
 [Bucles While](https://www.w3schools.com/python/python_while_loops.asp)  
-[Bucles For](https://www.w3schools.com/python/python_for_loops.asp)  
-[Funciones](https://www.w3schools.com/python/python_functions.asp)  
-[Ámbito](https://www.w3schools.com/python/python_scope.asp)
+[Bucles For](https://www.w3schools.com/python/python_for_loops.asp)
 
 [Python Tutor](https://pythontutor.com/)
