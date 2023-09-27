@@ -1,15 +1,15 @@
+# 3. Estructuras de datos
 
-## 2. Listas, tuplas, diccionarios y conjuntos
+## Índice
 
-    List - list
-    Tuple - tuple
-    Set - set
-    Dictionary - dict
-    None
+[1. Listas](#1-listas)  
+[2. Tuplas](#2-tuplas)  
+[3. Diccionarios](#3-diccionarios)  
+[4. Conjuntos](#4-conjuntos)
 
-### Listas
+## 1. Listas
 
-Esto son ejemplos de listas:
+Una lista (`list`) es una colección de elementos que pueden ser de distintos tipos:
 
     colors = ["red", "blue", "green"]
     stuff = ["thing", 3, True]
@@ -30,9 +30,9 @@ Se pueden recorrer:
     for color in colors:
       print(color)
 
-### Tuplas
+## 2. Tuplas
 
-Esto es un ejemplo de tupla:
+Una tupla (`tuple`) es una colección de elementos que son del mismo tipo:
 
     position = (2, 3, -1)
 
@@ -40,9 +40,9 @@ Las tuplas no se pueden modificar parcialmente, pero sí totalmente:
 
     position.remove(2) # Error
 
-### Diccionarios
+## 3. Diccionarios
 
-Esto son ejemplos de diccionarios:
+Esto son ejemplos de diccionarios (`dict`):
 
     dictionary = {1:"X", "X":2}
     godness = {"name": 'Unicornio', "lastname": 'Rosa Invisible', 'age': 31}
@@ -90,9 +90,9 @@ Se pueden recorrer:
     for key, value in godness.items():
       print(key, value)
 
-### Conjuntos
+## 4. Conjuntos
 
-Este es un ejemplo de conjunto:
+Este es un ejemplo de conjunto (`set`):
 
     colorBalls = {"red", "blue", "green"}
 
@@ -124,7 +124,18 @@ O buscar la intersección entre dos conjuntos para ver sus elementos comunes:
 
     commonBalls = balls1.intersection(balls2)
 
+## Resumen comparativo
+
+|Ordenado|Mutable|Indexado|Duplicados
+-|-|-|-
+Lista|Sí|Sí|Sí|Sí
+Tupla|Sí|No|Sí|Sí
+Diccionario|Sí|Sí|Sí|No
+Conjunto|No|No|No|No
+
+## Referencias
 
 [Listas](https://www.w3schools.com/python/python_lists.asp)  
 [Tuplas](https://www.w3schools.com/python/python_tuples.asp)  
 [Diccionarios](https://www.w3schools.com/python/python_dictionaries.asp)  
+[Conjuntos](https://www.w3schools.com/python/python_sets.asp)

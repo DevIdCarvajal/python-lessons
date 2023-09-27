@@ -160,6 +160,10 @@ O usar caracteres especiales:
 
     \\ \n \r \t \b
 
+A no ser que vayan precedidos por el prefijo de literalidad:
+
+    print(r"Esto sale tal cual: \n")
+
 Se pueden recorrer:
 
     for x in "banana":
