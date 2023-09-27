@@ -27,8 +27,8 @@
 2. Crear un fichero nuevo: File > New File ( `Ctrl + N` )
 3. Añadir estas dos líneas:
 
-        msg = "Hello World"
-        print(msg)
+      msg = "Hello World"
+      print(msg)
 
 4. Guardarlo con el nombre `hello.py`
 5. Ejecutar fichero en la terminal:
@@ -57,5 +57,5 @@ Para desinstalar un paquete:
 
 ## Referencias
 
-[Python: qué es, para qué sirve y cómo se programa](https://www.cursosaula21.com/que-es-python/)
+[Python: qué es, para qué sirve y cómo se programa](https://www.cursosaula21.com/que-es-python/)  
 [Documentación oficial de VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
