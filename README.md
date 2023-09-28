@@ -11,10 +11,8 @@
 2. Fundamentos
 3. Estructuras de datos
 4. Funciones
-5. Control de excepciones
-6. Módulos y paquetes
-7. Lectura y escritura de datos
-8. Manipulación de datos
+5. Excepciones, módulos y entrada/salida
+6. Manipulación de datos
 
 ## Referencias generales
 
