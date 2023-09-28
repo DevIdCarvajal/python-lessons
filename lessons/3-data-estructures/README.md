@@ -32,12 +32,13 @@ Se pueden recorrer:
 
 ## 2. Tuplas
 
-Una tupla (`tuple`) es una colección de elementos que son del mismo tipo:
+Una tupla (`tuple`) es también una colección de elementos que pueden ser de distintos tipos:
 
     position = (2, 3, -1)
 
 Las tuplas no se pueden modificar parcialmente, pero sí totalmente:
 
+    position[0] = 6 # Error
     position.remove(2) # Error
 
 ## 3. Diccionarios
@@ -126,11 +127,11 @@ O buscar la intersección entre dos conjuntos para ver sus elementos comunes:
 
 ## Resumen comparativo
 
-|Ordenado|Mutable|Indexado|Duplicados
--|-|-|-
+||Ordenado|Mutable|Indexado|Duplicados
+-|-|-|-|-
 Lista|Sí|Sí|Sí|Sí
 Tupla|Sí|No|Sí|Sí
-Diccionario|Sí|Sí|Sí|No
+Diccionario|Sí|Sí|Sí|Claves no, valores sí
 Conjunto|No|No|No|No
 
 ## Referencias
