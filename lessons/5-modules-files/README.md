@@ -1,4 +1,4 @@
-# 5. Excepciones, módulos y entrada/salida
+# 5. Módulos y ficheros
 
 ## Índice
 

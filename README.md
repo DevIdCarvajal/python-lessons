@@ -11,14 +11,14 @@
 2. Fundamentos
 3. Estructuras de datos
 4. Funciones
-5. Excepciones, módulos y entrada/salida
+5. Módulos y ficheros
 6. Manipulación de datos
 
 ## Referencias generales
 
-[Documentación oficial de Python](https://docs.python.org/es/3/)  
+[Documentación oficial de Python](https://docs.python.org/es/3/)
 
-[w3schools](https://www.w3schools.com/r/default.asp)  
-[codecademy](https://www.codecademy.com/learn/learn-r)
+[w3schools](https://www.w3schools.com/python/default.asp)  
+[codecademy](https://www.codecademy.com/learn/learn-python-3)
 
-[Katas Codewars](https://www.codewars.com/kata/search/r)
+[Katas Codewars](https://www.codewars.com/kata/search/python)
