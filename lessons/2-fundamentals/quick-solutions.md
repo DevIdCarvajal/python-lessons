@@ -51,7 +51,7 @@
 
 12
 
-    booleanoMix1 = (booleano1 and (TAU/2 == PI)) or (variableValorNumerico >= miNumeroFav)
+    booleanoMix1 = (booleano1 and (TAU[0]/2 == PI[0] and TAU[1]/2 == PI[1])) or (variableValorNumerico >= miNumeroFav)
 
 13
 
