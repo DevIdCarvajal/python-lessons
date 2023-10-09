@@ -73,7 +73,7 @@ Se pueden recorrer:
 
     # Otra forma:
 
-    for key in thisdict.keys():
+    for key in godness.keys():
       print(key)
 
     # Valores:
